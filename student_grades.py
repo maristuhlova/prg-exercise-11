@@ -39,6 +39,13 @@ class StudentsGrades:
         return scores
 
     def main(self):
+        pocet_studentu = results.count()
+        print(f"{pocet_studentu} studentů psalo test.")
+        for i in range(pocet_studentu):
+            body = results.get_by_index(i)
+            znamka = results.get_grade(i)
+            print(f"Student {i}: {body} points - {znamka}")
+
 
 
         random_results = StudentsGrades(random_numbers(30, 0, 100))
